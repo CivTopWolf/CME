@@ -7,9 +7,9 @@ CME Prospectus
 :Founder: TheLoneTopwolfx
 :Coordinates: (-6720, 3050)
 
-The CME is offering to sell shares of common stock in this offering. The selling
-stockholders identified in this prospectus are offering an additional 1000
-shares of common stock. Each share of common stock is entitled to one vote.
+The CME is offering to sell shares of common stock. The selling stockholders
+identified in this prospectus are offering an additional `1000` shares of common
+stock. Each share of common stock is entitled to one vote.
 
 .. contents::
 
@@ -17,10 +17,10 @@ Definitions
 ********************************************************************************
 
 Ask
-    pass
+    The price at which an exchange chest will sell an item.
 
 Bid
-    pass
+    The price at which an exchange chest will purchase an item.
 
 CME Token
     A type of Secure Note that the CME buys and sells.
@@ -42,8 +42,8 @@ Exchange
     - Spread between individual chest
 
 Spread
-    The difference between the bid price and ask price offered by an exchange
-    chest.
+    The difference in price between the bid and ask offered by a single
+    exchange chest.
 
 Prospectus Summary
 ********************************************************************************
@@ -53,6 +53,8 @@ summary does not contain all of the information you should consider before
 investing in common stock.
 
 ----
+
+.. todo: complete this section last
 
 The CME is a market maker. It provides value to its customers by providing
 liquidity for selected commodities.
@@ -78,9 +80,12 @@ entitled to one vote on matters submitted to our stockholders.
 Business
 ********************************************************************************
 
-The CME is a commodity market maker; it makes money by charging a fee for
-connecting buyers and sellers. This differentiates it from other shops in two
-important ways:
+The CME is a market maker for commodities; it generates revenue by buying items
+at once price (the "bid"), and reselling them at a second higher price (the
+"ask").
+
+As a market marker,  the CME is different from other shops in two important
+ways:
 
 1. Most shops only sell items; they do not also buy them. When a shop only sells
    items, the incentive of the shopkeeper is to charge the highest price he
@@ -96,10 +101,8 @@ important ways:
    In contrast, market makers never runs out of stock. There is always a way to
    interact with them.
 
-The CME generates revenue by collecting a fee when it connects a buyer to a
-seller. There are two ways we collect fees: through spreads, and though CME
-tokens. The decision to use a spread or CME tokens depends on the value of the
-item.
+There are two ways we collect fees: through spreads, and though CME tokens. The
+decision to use a spread or CME tokens depends on the value of the item.
 
 Tokens
 ================================================================================
