@@ -175,11 +175,15 @@ exchange consists of 13 exchange chests. So about 130-156d per row.
   working with Romec - they may need to be property of the mall in order to
   avoid interfering with other shops below.
 
+  Bastions cost about 25d each. Plus they require DRO. The total cost of this
+  will be at least 25 * 2 + 5 * 2 diamonds (5 * 2 assuming we use one piece of
+  DRO on all sides, and places the bastion at bedrock).
+
 - Add 2 more rows of diamond exchanges. This will require 10 * 13 *
   2 = 260 diamonds plus 13 * 2 = 26 double chests. The estimated cost of this
   is 312 diamonds.
 
-- Add 8 rows of XP blocks. This will require 13 * 6 * 8 = 624 XP blocks, and 13
+- Add 8 rows of XP blocks. This will require 8 * 13 * 6 = 624 XP blocks, and 13
   * 6 = 78 double chests. The estimated value of this is 624 * 2 + 78 * 2 =
   1404 diamonds.
 
@@ -193,17 +197,6 @@ exchange consists of 13 exchange chests. So about 130-156d per row.
   diamonds can be safely stored in a shop chest.
 
 - Increase the supply of logs. Logs have constant demand.
-
-The two ongoing expenses we need to pay are the shop steward who is
-responsible for:
-
-1. Adding, removing, and editing exchanges
-
-2. Periodically creating balance sheets
-
-If we assume it takes about 5 seconds to do an operation on a chest, and there
-are 13 chests in an exchange, then it should take about a minute to a perform
-an operation on every chest in an exchange.
 
 Capitalization
 ********************************************************************************
@@ -280,6 +273,20 @@ per day):
 
 Management
 ********************************************************************************
+
+Metrics
+================================================================================
+
+The two ongoing expenses we need to pay are the shop steward who is
+responsible for:
+
+1. Adding, removing, and editing exchanges
+
+2. Periodically creating balance sheets
+
+If we assume it takes about 5 seconds to do an operation on a chest, and there
+are 13 chests in an exchange, then it should take about a minute to a perform
+an operation on every chest in an exchange.
 
 Security
 ================================================================================
