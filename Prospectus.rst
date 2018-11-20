@@ -39,43 +39,11 @@ Exchange
 
     - Number of exchanges in each chest (tuple of bids, asks)
 
-    - Spread between individual chest
+    - A spread
 
 Spread
     The difference in price between the bid and ask offered by a single
     exchange chest.
-
-Prospectus Summary
-********************************************************************************
-
-This summary highlights information contained elsewhere in this prospectus. This
-summary does not contain all of the information you should consider before
-investing in common stock.
-
-----
-
-.. todo: complete this section last
-
-The CME is a market maker. It provides value to its customers by providing
-liquidity for selected commodities.
-
-Products
-
-Strategy and Opportunity
-
-Business
-
-We generate revenue by connecting buyers and sellers.
-
-    Our revenue was $603.8 million, $844.8 million, and $1,106.8 million in
-    2015, 2016, and 2017, respectively, representing an annual growth rate of
-    40% and 31%, respectively. We generated net losses of $325.9 million, $210.2
-    million, and $111.7 million in 2015, 2016, and 2017, respectively.
-
-Capital Structure
-
-There is only one class of common stock. All holders of common stock are
-entitled to one vote on matters submitted to our stockholders.
 
 Business
 ********************************************************************************
@@ -180,9 +148,7 @@ Market, industry, and other data
 
 One other diamond exchanges on the ground floor of the MTA mall, owned by
 Olivay. He makes no profit from it. This has the effect of reducing the total
-number of buyers and sellers we will connect.
-
-Rather than viewing this as a threat, I view this as an ally- it increase the
+number of buyers and sellers we will connect. However, it also increases the
 total supply of iron and diamonds available for trading in MTA, which should
 make it more attractive for people to travel further distances to do large
 trades.
@@ -245,40 +211,81 @@ Capitalization
 Balance sheet
 ================================================================================
 
-As of Nov 13, 2018, the estimated value of the CME assets is 1160 diamonds. This
-was calculating by summing 1) the total number of diamonds and iron stored in
-the exchange chests, 2) the costs of the chests themselves, and 3) the costs of
-the CME tokens.
+The valuation of the CME is measured in iron. This is because it will be simpler
+to compare over time as we expand to trade other materials.
+
+The valuation of the CME is calculated by summing 1) the total number of
+diamonds and iron stored in the exchange chests, and 2) the costs of the chests
+themselves. The iron value of diamonds is calculated by measuring the amount
+that the diamonds could be sold for on the CME's exchange.
+
+As of Nov 13, 2018, the estimated value of the CME assets is the following::
+
+    Cash, cash equivalents                      0
+    Assets                                      17816.75
+      Diamonds (273)                            04201.75
+        Inventory (67)
+        Reinforcement (206)
+      Iron                                      13615
+    Total liabilities                           0
+    Total equity                                17816.75
+
+As of Nov 17, 2018 (bid: 16.5, ask: 16.5), the balance is the following::
+
+    Cash, cash equivalents                      0
+    Assets                                      17712.5
+      Diamonds (416)                            6355.5
+        Inventory (210)
+        Reinforcement (206)
+      Iron                                      11357
+    Total liabilities                           0
+    Total equity                                17712.5
+
+Income statement
+================================================================================
+
+Because the CME uses two currencies, there is no simple way to calculate
+revenue- we cannot simply sum up all the diamonds and iron and compare one week
+to another because we will hold different amounts of each as the prices
+fluctuates. Instead, we aim to measure the number of transactions per exchange
+chest. To do this, we measure per exchange chest a score called :math:`V1`
+defined the in the following way:
+
+.. math::
+
+    V1 = BidPrice \times Asks + IronTotal
+
+To understand why this works, consider a chest that offers the following
+trades::
+
+    11 Iron -> 1 Diamond
+    1 Diamond -> 10 Iron
+
+Assume it starts with 10 diamonds (:math:`V1 = 100`). If Alice buys a diamond,
+then V1 increases by 1 (:math:`V1 = 10 \times 9 + 11 = 101`). If Bob then sells
+a diamond, V1 stays the same (:math:`V1 = 10 \times 10 + 1 = 101`).  If this
+repeats itself itself 10 times, then :math:`V1 = 10 \times 10 + 10 = 110`. And
+if on that tenth time, Bob sells an eleventh diamond, then R stays the same
+(:math:`V1 = 10 \times 11 + 0 = 110`).
+
+Assuming that V1 is a good measure, the CME made 133 iron in 8 days (~16 iron
+per day):
 
 ::
 
-    Cash, cash equivalents                        0
-    Assets
-      Diamonds                                    67
-      Iron                                        13615
-      CME tokens                                  4871
-    Total liabilities                             0
-    Total equity                                  ?
+                    V1          Difference
 
-Dilution
-********************************************************************************
+    2018-11-09      14845       -
+    2018-11-17      14978       133
 
 Management
 ********************************************************************************
-
-Finanical metrics
-================================================================================
-
-Fees are always collected as iron. In order to convert profits back into
-diamonds, we need to buy diamonds from our own exchange.
-
-It is difficult to collect financial metrics on the shop.
 
 Security
 ================================================================================
 
 My philosophy on security is that the only effective security is that which can
-be publicly revealed and still work.
+be publicly revealed and still work (Kerckhoffs's principle).
 
 I do not consider bounties an effective form of security. Thieves today use
 alts, and even if they did not, bounties are expensive to place.
